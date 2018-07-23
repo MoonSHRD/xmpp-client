@@ -65,7 +65,7 @@ function generate_byte() {
 xmpp.connect({
     jid					: "Test_user@localhost",
     // password		    : generate_byte(),
-    password            : ' ',
+    password            : '',
     signature           : "there'll a signature",
     host				: '192.168.1.10',
     port				: 5222
