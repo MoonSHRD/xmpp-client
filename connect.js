@@ -1,3 +1,5 @@
+'use strict';
+
 var xmpp = require('simple-xmpp');
 
 xmpp.on('online', function(data) {
@@ -29,7 +31,7 @@ xmpp.on('close', function() {
 
 xmpp.on('buddy', function(jid, state, statusText) {
     console.log("---------------%s is now '%s' (%s)", jid, state, statusText);
-    xmpp.send(jid, "hello v rot");
+    xmpp.send(jid, "hello");
 
 
     process.stdin.setEncoding('utf8');
@@ -67,6 +69,7 @@ xmpp.connect({
     // password		    : generate_byte(),
     password            : '',
     signature           : "there'll a signature",
-    host				: '192.168.1.10',
+    // host				: '192.168.1.7',
+    host                : 'localhost',
     port				: 5222
 });
